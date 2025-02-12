@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.header {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    background-color: #efc9c9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; 
+}
+
+.header .logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.header button {
+    background-color: rgb(196, 66, 135);
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 40px);
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.message {
+    flex: 1;
+    padding: 20px;
+    overflow: hidden; 
+}
+
+.input-message {
+    
+    padding: 10px;
+    background-color: #efc9c9;
+    display: flex;
+    justify-content: space-between;
+    left:0%;
+    margin:0%;
+}
+
+.input-message input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    outline: none;
+}
+
+.input-message button {
+    padding: 10px 20px;
+    border-radius:5px;
+    background-color: rgb(196, 66, 135);
+    cursor: pointer;
+    outline:none;
+    font-weight: 700;
+    border: none;
+}
