@@ -5,20 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Room</title>
     <link rel="stylesheet" type="text/css" href="./styles2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">Chatroom</div>
-        <button>Exit</button>
-    </header>
-    <div class="container">
-        <div class="message">
 
+    <!-- Login Form -->
+    <div class="container">
+        <div class="logo">
+            <h1>Let's chat <i class='bx bx-message-rounded-dots bx-flashing' style='color:#060606'></i></h1>
         </div>
-        <div class="input-message">
-            <input type="text" placeholder="enter your message" autofocus>
-            <button>Send</button>
+        <form class="login">
+            <label for="username">Enter Username:</label>
+            <div class="input-container">
+                <i class='bx bxs-user' style='color:#333333'></i>
+                <input type="text" placeholder="username" class="username" required autofocus>
+            </div>
+            <button class="btn">Join</button>
+        </form>
+    </div>
+
+    <!-- Chatroom (Initially hidden) -->
+    <div class="app" style="display:none;">
+        <div class="screen chat-screen active">
+            <header class="header">
+                <div class="logo">Chatroom</div>
+                <button id="exit-chat">Exit</button>
+            </header>
+            <div class="messages">
+                <div class="message my-message">
+                    <div>
+                        <div class="name">YOU</div>
+                        <div class="text">Hi</div>
+                    </div>
+                </div>
+                <div class="update">
+                    Someone joined
+                </div>
+                <div class="message other-message">
+                    <div>
+                        <div class="name">Other</div>
+                        <div class="text">hello</div>
+                    </div>
+                </div>
+            </div>
+            <div class="typebox">
+                <input type="text" id="message-input" placeholder="Enter your message" autofocus>
+                <button id="send-message">Send</button>
+            </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="script2.js"></script>
+
 </body>
 </html>

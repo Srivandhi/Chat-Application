@@ -1,77 +1,162 @@
-* {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    font-family: 'Poppins', sans-serif;
+*{
+    margin:0px;
+    padding:0px;
     box-sizing: border-box;
 }
 
-
-
-.header {
-    width: 100%;
-    height: 40px;
-    position: fixed;
-    top: 0;
-    background-color: #efc9c9;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000; 
+.container{
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    max-width: 400px;
+    text-align: center;
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0 0  6px #696868;
+    display: block;
 }
 
-.header .logo {
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 10px;
+.login h1{
+   color:#333;
+   margin-bottom:30px;
+   font-size:2rem;
 }
-
-.header button {
-    background-color: rgb(196, 66, 135);
-    border: none;
-    outline:none;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-}
-
-.container {
+form{
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 40px);
-    margin-top: 40px;
-    overflow: hidden;
+    gap:15px;
+    margin:20px;
 }
-
-.message {
-    flex: 1;
-    padding: 20px;
-    overflow: hidden; 
+.login label{
+    font-weight: bold;
 }
-
-.input-message {
-    
-    padding: 10px;
-    background-color: #efc9c9;
-    display: flex;
-    justify-content: space-between;
-    left:0%;
-    margin:0%;
-}
-
-.input-message input[type="text"] {
-    width: 80%;
-    padding: 10px;
+.login input{
     outline: none;
+   padding:8px;
+   border: none;
+}
+.login button{
+    cursor: pointer;
+    width:50%;
+    padding:8px;
+    background-color: rgb(196, 66, 135);
+    font-weight: bold;
+    border:none;
+    align-self: center;
+    border-radius: 10px;;
+}
+.login .input-container{
+    border:1px solid black;
+    padding:5px;
+    padding-left: 0;
+    margin-left:0;
 }
 
-.input-message button {
-    padding: 10px 20px;
-    border-radius:5px;
-    background-color: rgb(196, 66, 135);
-    cursor: pointer;
-    outline:none;
+
+body{
+    font-family:"Roboto",sans-serif;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.app{
+    position: fixed;
+    width:100%;
+    height:100%;
+    max-width: 600px;
+    background:#fff;
+    border-left:1px solid #eee;
+    border-right:1px solid #eee;
+    display:block;
+}
+
+.chat-screen .header{
+    background-color: #efc9c9;
+    height:50px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+}
+.chat-screen .header .logo{
+    font-size:18px;
+    color:black;
+    font-weight: 600;
+}
+.chat-screen .header button{
+    padding:5px  10px;
+    border:none;
+    background-color:rgb(196, 66, 135);
+    border-radius: 5px;
     font-weight: 700;
-    border: none;
+    cursor:pointer;
+    z-index: 10;
+}
+.chat-screen .messages{
+    width: 100%;
+    height:calc(100%-100px);
+    overflow:auto;
+}
+.chat-screen .messages .message{
+    display:flex;
+    padding:10px;
+}
+.chat-screen .messages .message > div{
+    max-width: 80%;
+    background-color: #e16969;
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+    padding:10px;
+    border-radius: 2px;;
+}
+.chat-screen .messages .message.my-message{
+    justify-content: flex-end;
+}
+.chat-screen .messages .message.other-message{
+    justify-content: flex-start;
+}
+.chat-screen .messages .message .name{
+    font-size:13px;
+    color:#000000;
+    margin-bottom:5px;
+    font-weight: 800;
+}
+.chat-screen .messages .message .text{
+    word-wrap: break-word;
+    font-size:13px;
+}
+.chat-screen .messages .message .text{
+    text-align:center;
+    padding:8px;
+    font-style: italic;
+}
+.chat-screen .update{
+    text-align: center;
+    padding:10px;
+    font-style: italic;
+}
+.chat-screen .typebox{
+    height:50px;
+    position:fixed;
+    bottom:0;
+    display:flex;
+    justify-content: space-between;
+}
+.chat-screen .typebox input {
+    flex:1;
+    width:500px;
+    height:50px;
+    font-size:18px;  
+    outline:none;
+    cursor:pointer;
+}
+.chat-screen .typebox button{
+    width:100px;
+    height:100%;
+    background-color:rgb(196, 66, 135); 
+    font-weight: 700;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:5px;
+    z-index: 10;
 }
